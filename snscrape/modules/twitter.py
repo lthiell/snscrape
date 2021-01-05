@@ -419,12 +419,12 @@ class TwitterSearchScraper(TwitterAPIScraper):
 	def get_items(self):
 		params = {
 			'include_profile_interstitial_type': '1',
-			'include_blocking': '1',
-			'include_blocked_by': '1',
+			'include_blocking': '0',
+			'include_blocked_by': '0',
 			'include_followed_by': '1',
 			'include_want_retweets': '1',
 			'include_mute_edge': '1',
-			'include_can_dm': '1',
+			'include_can_dm': '0',
 			'include_can_media_tag': '1',
 			'skip_status': '1',
 			'cards_platform': 'Web-12',
@@ -441,7 +441,7 @@ class TwitterSearchScraper(TwitterAPIScraper):
 			'simple_quoted_tweets': 'true',
 			'q': self._query,
 			'tweet_search_mode': 'live',
-			'count': '100',
+			'count': '10000',
 			'query_source': 'spelling_expansion_revert_click',
 		}
 		paginationParams = params.copy()
