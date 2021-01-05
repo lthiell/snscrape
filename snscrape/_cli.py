@@ -277,7 +277,7 @@ def main():
 				print(args.format.format(item))
 			else:
 				print(item)
-			if args.progress and i % 100 == 0:
+			if args.progress and i % 10_000 == 0:
 				print(f'Scraping, {i} results so far', file = sys.stderr)
 			if args.maxResults and i >= args.maxResults:
 				logger.info(f'Exiting after {i} results')
